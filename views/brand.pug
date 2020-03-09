@@ -1,0 +1,9 @@
+extends layout
+
+h1 {Brand.name}
+img {Brand.logo}
+p {Brand.desc}
+ul 
+    for shoe in Brand.shoes
+    li 
+        a(href={Brand.shoe.url}) {Brand.shoe.name}

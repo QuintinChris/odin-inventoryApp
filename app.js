@@ -8,17 +8,11 @@ var mongoose = require('mongoose');
 // add 0.0.0.0/0 for IP Address
 // username: shoeUser
 // password: shoeCanttouchthis
-var mongoDB = 'mongodb+srv://shoeUser:<shoeCanttouchthis>@shoe-closet-cluster-jc4im.mongodb.net/test?retryWrites=true&w=majority';
-
-mongoose.connect(mongoDB, {
-  useNewUrlParser: true
-});
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'MongoDB connection error'));
-
+var mongoDB = 'mongodb+srv://shoeUser:shoeCanttouchthis@shoe-closet-cluster-jc4im.mongodb.net/test?retryWrites=true&w=majority';
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var catalogRouter = require('./routes/catalog');
 
 var app = express();
 
@@ -40,11 +34,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/catalog', catalogRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+//app.use(function(req, res, next) {
+//  next(createError(404));
+//});
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -56,5 +51,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+mongoose.connect(mongoDB, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error'));
+
 
 module.exports = app;

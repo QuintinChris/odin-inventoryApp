@@ -2,18 +2,13 @@ extends layout
 
 block content
   h1 #{title}
-
-  h3 Dynamic content
   
-  if error
-    p Error getting dynamic content.
-  else 
-
   ul
-    //- shoe_list.sort(function(a,b))
-    each shoe in shoe_list
+    //- shoe_list.sort(function(a,b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;})
+    //-each shoe in shoe_list
       li
-        a(href=shoe.url) #{shoe.image}
-        |   (#{shoe.name})
-    else
+        a(href=shoe.url) #{shoe.name}
+        |   (#{shoe.image})
+
+    //-else
       li There are no shoes

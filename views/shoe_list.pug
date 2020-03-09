@@ -1,0 +1,9 @@
+extends layout
+ul
+    //- shoe_list.sort(function(a,b))
+    each shoe in shoe_list
+        li
+        a(href=shoe.url) #{shoe.image}
+        |   (#{shoe.name})
+    else
+      li There are no shoes
