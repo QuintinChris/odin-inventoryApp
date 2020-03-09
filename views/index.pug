@@ -1,5 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 #{title}
+
+  h3 Dynamic content
+  
+  if error
+    p Error getting dynamic content.
+  else 
+
+    for each Shoe in shoes
+    ul
+      li
+        a {Shoe.image}
