@@ -30,11 +30,11 @@
 
 #### [ ] In the Library tutorial you populated your database with some sample data that was provided in a populatedb.js file. Actually understanding how that worked was over your head at the time, but now that you’ve finished that tutorial you’ll be able to understand how it works. Download the file here and edit it, or re-write it using the specifics of your models and then run it to populate your database!
 
-** [ ] Set up the routes and controllers you’re going to need. **
+**[ ] Set up the routes and controllers you’re going to need.**
 
-### [ ] Create all of the ‘READ’ views (i.e. view category, and view item)
+**[ ] Create all of the ‘READ’ views (i.e. view category, and view item)**
 
-### [ ] Create all the forms and build out the controllers you need for the rest of the CRUD actions.
+**[ ] Create all the forms and build out the controllers you need for the rest of the CRUD actions.**
 
 [ ] EXTRA CREDIT: For bonus points, try to figure out how to add and upload images for each item. Use this middleware which was created by the Express team. The documentation in the README there should be enough to get you going.
 
@@ -44,6 +44,7 @@
 
 ## Stretch Goals:
 
+Admin methods (create/delete shoe, brand)
 
 Authenticate, add ability to favorite shoes
 - Closet
@@ -54,5 +55,12 @@ Authenticate, add ability to favorite shoes
   - profilePic
 
 Add Favorites
-- Ability to sort through, create folders / collection like pinteres
+- Ability to sort through, create folders / collection like pinterest
+
+Add Seach Method
+
+Add filters to search (most popular, latest release, etc)
+
+Add "player" category (like genre, but for sneakers belonging to a specific player + brand)
+
 

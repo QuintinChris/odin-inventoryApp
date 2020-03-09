@@ -9,7 +9,11 @@ block content
     p Error getting dynamic content.
   else 
 
-    for each Shoe in shoes
-    ul
+  ul
+    //- shoe_list.sort(function(a,b))
+    each shoe in shoe_list
       li
-        a {Shoe.image}
+        a(href=shoe.url) #{shoe.image}
+        |   (#{shoe.name})
+    else
+      li There are no shoes
