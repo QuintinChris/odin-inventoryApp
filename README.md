@@ -36,7 +36,7 @@
 - Getting errors, think ability to add images should be implemented first
 
 Set up the routes and controllers you’re going to need.
-- [ ] Create routes
+- [X] Create routes
 - [ ] Create controllers
 
 Create all of the ‘READ’ views (i.e. view category, and view item)

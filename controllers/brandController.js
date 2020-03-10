@@ -9,16 +9,4 @@ exports.index = function (req, res) {
     res.send('NOT IMPLEMENTED: Site Home Page');
 };
 
-// display list of all brands
-
-// display brand detail page
-
-// display brand create form (if member?)
-
-// handle brand create on POST (if member?)
-
-    // this is where you would perform validation/sanitization
-
-// brand delete get/post (if admin)
-
-// brand update get/post (if admin)
+// this is where you would perform validation/sanitization

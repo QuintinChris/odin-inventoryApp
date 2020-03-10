@@ -1,9 +1,12 @@
 extends layout
-ul
-    //- shoe_list.sort(function(a,b))
-    each shoe in shoe_list
-        li
-        a(href=shoe.url) #{shoe.image}
-        |   (#{shoe.name})
-    else
-      li There are no shoes
+
+block content
+
+    ul
+        - shoe_list.sort(function(a,b) {let textA = a.title.toUpperCase(); let textB = b.title.toUpperCase(); return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;})
+        each shoe in shoe_list
+            li
+            a(href=shoe.url) #{shoe.image}
+            |   (#{shoe.name})
+        else
+            li There are no shoes

@@ -1,40 +1,27 @@
 var express = require('express');
 var router = express.Router();
-
 var shoe_controller = require('../controllers/shoeController');
 var brand_controller = require('../controllers/brandController');
 var shoe_instance_controller = require('../controllers/shoeInstanceController');
 
-
+// GET index
 router.get('/', shoe_controller.index);
 
-// Get for single shoe
+// GET for single shoe
 router.get('/shoe/:id', shoe_controller.shoe_detail);
 
-// Get shoe_list
+// GET shoe_list
 router.get('/shoes', shoe_controller.shoe_list);
 
-// Get create_shoe
+// GET for single brand
+router.get('/brand/:id', brand_controller.brand_detail)
 
-// post create_shoe
+// GET / POST create_shoe (admin)
 
-// get and post brand
+// GET/POST update_shoe (admin)
 
-// get and post
+// GET/POST delete_shoe (admin)
 
-
-// display list of all shoes
-
-// display shoe detail page
-
-// display shoe create form (if member?)
-
-// handle shoe create on POST (if member?)
-
-    // this is where you would perform validation/sanitization
-
-// shoe delete get/post (if admin)
-
-// shoe update get/post (if admin)
+// GET/POST create_brand (admin)
 
 module.exports = router;
