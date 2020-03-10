@@ -37,7 +37,7 @@
 
 Set up the routes and controllers you’re going to need.
 - [X] Create routes
-- [ ] Create controllers
+- [X] Create controllers
 
 Create all of the ‘READ’ views (i.e. view category, and view item)
 - [X] Create views
@@ -45,12 +45,13 @@ Create all of the ‘READ’ views (i.e. view category, and view item)
 Create all the forms and build out the controllers you need for the rest of the CRUD actions.
 - [ ] Create form views
 - [ ] Create form controllers 
+- For now. make it so anyone could do it. Later we'll add auth.
 
 EXTRA CREDIT: For bonus points, try to figure out how to add and upload images for each item. Use this middleware which was created by the Express team. The documentation in the README there should be enough to get you going.
 - [ ] Add methods and views to upload photo
 
 EXTRA CREDIT: We will learn about creating users with secure passwords in a later lesson, but for now we don’t want just anyone to be able to delete and edit items in our inventory! Figure out how to protect destructive actions (like deleting and updating) by making users enter a secret admin password to confirm the action.
-- [ ] Add admin authentication
+- [ ] Add admin authentication/authorization
 
 Deploy it and show off what you’ve done!
 - [ ] Deployed

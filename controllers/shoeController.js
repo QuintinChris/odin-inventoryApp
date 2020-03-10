@@ -38,6 +38,13 @@ exports.shoe_detail = function(req, res, next) {
             err.status = 404;
             return next(err);
         }
-        res.render('shoe_detail', {title: 'Shoe Detail', shoe: results.shoe, shoe_instances: results.shoe_instance } );
+        res.render('shoe_detail', {title: 'Shoe Detail', image: 'Shoe Image', shoe: results.shoe, shoe_instances: results.shoe_instance } );
     });
 };
+
+
+// Admin Methods:
+// Create_shoe
+// Delete_shoe
+// Edit_shoe
+// this is where you would perform validation/sanitization
