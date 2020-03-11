@@ -43,9 +43,18 @@ In the Library tutorial you populated your database with some sample data that w
 - [X] Create views
 
 Create all the forms and build out the controllers you need for the rest of the CRUD actions.
-- [ ] Create form views
-- [ ] Create form controllers 
-- [ ] Create Shoe, Edit Shoe, Delete shoe
+- [ ] Create Shoe, Brand
+  - [X] views
+  - [ ] controllers
+  - [ ] catalog router.get
+- [ ] Edit Shoe, Brand
+  - [ ] views
+  - [ ] controllers
+  - [ ] catalog router.get
+- [ ] Delete shoe, Brand
+  - [ ] views
+  - [ ] controllers
+  - [ ] catalog router.get
 - For now. make it so anyone could do it. Later we'll add auth.
 
 EXTRA CREDIT: For bonus points, try to figure out how to add and upload images for each item. Use this middleware which was created by the Express team. The documentation in the README there should be enough to get you going.
