@@ -7,8 +7,8 @@ const { body, validationResult } = require('express-validator/check');
 const { sanitizeBody } = require('express-validator/filter');
 
 exports.index = function (req, res) {
-    res.send('NOT IMPLEMENTED: Site Home Page');
-    //res.render('index', {title: 'Shoe Inventory Home'});
+    //res.send('NOT IMPLEMENTED: Site Home Page');
+    res.render('index', {title: 'Shoe Inventory Home'});
 };
 
 exports.shoe_list = function (req, res, next) {

@@ -16,6 +16,9 @@ router.get('/shoes', shoe_controller.shoe_list);
 // GET for single brand
 router.get('/brand/:id', brand_controller.brand_detail)
 
+// GET for brand list
+router.get('/brands', brand_controller.brand_list)
+
 // GET / POST create_shoe (admin)
 
 // GET/POST update_shoe (admin)
