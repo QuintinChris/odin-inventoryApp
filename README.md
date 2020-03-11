@@ -32,19 +32,20 @@
 ### Set up your database schemas and models.
 - [X] Complete
 
-#### [ ] In the Library tutorial you populated your database with some sample data that was provided in a populatedb.js file. Actually understanding how that worked was over your head at the time, but now that you’ve finished that tutorial you’ll be able to understand how it works. Download the file here and edit it, or re-write it using the specifics of your models and then run it to populate your database!
+In the Library tutorial you populated your database with some sample data that was provided in a populatedb.js file. Actually understanding how that worked was over your head at the time, but now that you’ve finished that tutorial you’ll be able to understand how it works. Download the file here and edit it, or re-write it using the specifics of your models and then run it to populate your database!
 - Getting errors, think ability to add images should be implemented first
 
-Set up the routes and controllers you’re going to need.
+### Set up the routes and controllers you’re going to need.
 - [X] Create routes
 - [X] Create controllers
 
-Create all of the ‘READ’ views (i.e. view category, and view item)
+### Create all of the ‘READ’ views (i.e. view category, and view item)
 - [X] Create views
 
 Create all the forms and build out the controllers you need for the rest of the CRUD actions.
 - [ ] Create form views
 - [ ] Create form controllers 
+- [ ] Create Shoe, Edit Shoe, Delete shoe
 - For now. make it so anyone could do it. Later we'll add auth.
 
 EXTRA CREDIT: For bonus points, try to figure out how to add and upload images for each item. Use this middleware which was created by the Express team. The documentation in the README there should be enough to get you going.
