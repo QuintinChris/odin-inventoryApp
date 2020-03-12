@@ -39,13 +39,13 @@ exports.shoe_detail = function(req, res, next) {
             err.status = 404;
             return next(err);
         }
-        res.render('shoe_detail', {title: 'Shoe Detail', image: 'Shoe Image', shoe: results.shoe, shoe_instances: results.shoe_instance } );
+        res.render('shoe', {title: 'Shoe Detail', image: 'Shoe Image', shoe: results.shoe, shoe_instances: results.shoe_instance } );
     });
 };
 
 
 // Display create shoe on GET
-exports.shoe_create_get = function(req, res, next) {
+exports.create_shoe_get = function(req, res, next) {
     async.parallel({
         brands: function(callback) {
             Brand.find(callback);
@@ -57,7 +57,7 @@ exports.shoe_create_get = function(req, res, next) {
 };
 
 // Handle shoe create on POST
-exports.shoe_create_post = function(req, res, next) [
+exports.create_shoe_post = [
     // Validate fields
     body('name', 'Name must not be empty.').isLength({ min: 1 }).trim(),
     body('brand', 'A brand must be selected.').isLength({ min: 1 }).trim(),
@@ -74,7 +74,7 @@ exports.shoe_create_post = function(req, res, next) [
         const errors = validationResult(req);
 
         // Create shoe with escaped / trimmed data
-        var shoe = new SourceBuffer(
+        var shoe = new Shoe(
             { name: req.body.name,
               brand: req.body.brand,
               image: req.body.image,
@@ -84,7 +84,7 @@ exports.shoe_create_post = function(req, res, next) [
         if (!errors.isEmpty()){
             // if there are errors, render form again w sanitized data
 
-            // Get all authors and genres for form
+            // Get all brands for form
             async.parallel({
                 brands: function(callback) {
                     Brand.find(callback);
@@ -106,7 +106,7 @@ exports.shoe_create_post = function(req, res, next) [
 ];
 
 // Display delete_shoe on GET
-exports.book_delete_get = function(req, res, next) {
+exports.delete_shoe_get = function(req, res, next) {
     async.parallel({
         shoe: function(callback) {
             Shoe.findById(req.params.id).populate('brand').exec(callback);
@@ -124,7 +124,7 @@ exports.book_delete_get = function(req, res, next) {
 };
 
 // Handle delete_shoe on POST
-exports.book_delete_post = function(req, res, next) {
+exports.delete_shoe_post = function(req, res, next) {
     async.parallel({
         shoe: function(callback) {
             Shoe.findById(req.params.id).populate('brand').exec(callback);
@@ -151,7 +151,7 @@ exports.book_delete_post = function(req, res, next) {
 };
 
 
-// Get edit_shoe on GET
+// Display update_shoe on GET
 exports.update_shoe_get = function(req, res, next) {
     async.parallel({
         shoe: function(callback) {
@@ -171,8 +171,8 @@ exports.update_shoe_get = function(req, res, next) {
     });
 };
 
-// Handle shoe edit on POST
-exports.update_shoe_post = function(req, res, next) [
+// Handle update_shoe on POST
+exports.update_shoe_post = [
     // Validate fields
     body('name', 'Name must not be empty.').isLength({ min: 1 }).trim(),
     body('brand', 'A brand must be selected.').isLength({ min: 1 }).trim(),
@@ -189,7 +189,7 @@ exports.update_shoe_post = function(req, res, next) [
         const errors = validationResult(req);
 
         // Create shoe with escaped / trimmed data
-        var shoe = new SourceBuffer(
+        var shoe = new Shoe(
             { name: req.body.name,
               brand: req.body.brand,
               image: req.body.image,
@@ -199,7 +199,7 @@ exports.update_shoe_post = function(req, res, next) [
         if (!errors.isEmpty()){
             // if there are errors, render form again w sanitized data
 
-            // Get all authors for form
+            // Get all brands for form
             async.parallel({
                 brands: function(callback) {
                     Brand.find(callback);
